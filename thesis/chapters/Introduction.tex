@@ -1,0 +1,62 @@
+\chapter{Introduction}
+\label{section:Introduction}
+
+Even the simplest animal movement has long been difficult to reproduce for computer systems.
+Only in recent years has the state of technology come to a point where finding the actual solution to this problem appears to be in reach.
+This thesis gives an overview of these new technologies and tries to apply them to simulate snake movement.
+
+\section{Motivation}
+
+Training robots to take over human work is a controversially discussed topic at the moment.
+But there are many situations where risking a robot instead of a human would be undoubtedly favorable.
+Think of a fireman that faces a life threatening situation when entering a burning house in the search for missing residents.
+No one would argue that entering the house with a robot first and therefore keeping the fireman from possible harm would not be desired.
+This kind of scenario is not science fiction.
+Recently snake robots have been used to search for survivors after an 7.1-magnitude earthquake in Mexico City \cite{cmu_snake_robots_mexico}.
+These kinds of robots are especially suited for this task because of their agility and size.
+They are so small that they fit into holes that no human could put their arm through let alone walk through.
+At the moment most of these robots have to be controlled by humans in order to move forward but often enough it would be better if the snakes could control themselves to find the best possible way from their current position.
+
+
+This is where \emph{Reinforcement Learning (RL)} comes into play.
+RL is often also referred to as \emph{Deep Reinforcement Learning} which emphasizes the use of deep neural networks.
+In this thesis we will use both terms equivalently.
+RL can learn control tasks without the need for human supervision simply by trial and error, often enough learning better or at least different solutions to a problem than one might expect.
+But RL is also a comparatively unexplored field of study where often the simplest tasks come out to be very difficult.
+In the past few years many advances in other fields, like increase in computational power, new software frameworks and massive datasets emerged that indirectly led to advances in RL.
+%TODO:
+Recent breakthroughs have shown that it is possible to train a machine complex tasks that were thought to be only manageable by humans just a few years ago.
+Therefore research in this field has become very active and new papers are released nearly every month that set new standards in their own domain.
+
+
+Many areas could benefit from finding a general system that can learn optimal actions in different situations, like self-driving cars, spacecrafts, cleaning robots or industrial machines.
+Not only could one decrease costs, but also and most importantly, make them safer for the interaction with humans.
+In recent years neural networks, systems that try to mimic the inner workings of biological brains, have been found to yield good results in these domains.
+These neural networks are used as non-linear function approximators that can be adapted to maximize some kind of reward function.
+This reward is typically a numerical representation of the value of a decision, for example the points you get in a video game.
+Neural networks work so well because unlike rule-based programs they learn from experience, therefore even if it not possible for us to formulate a specific set of rules for a problems, these systems can still find an optimal solution to it.
+
+\section{Summary}
+
+This thesis will present state of the art RL algorithms that are already used in various fields.
+We will take these algorithms and make them learn to move a simulated snake-robot forward.
+In each of these algorithms we will look at the problem of \emph{Exploration vs Exploitation}, which says that in order to master a task one has to exploit the best solution while exploring new ways to find even better solutions.
+Of course, both of this cannot happen at the same time as exploring more often than not results in worse outcomes than exploitation.
+Therefore one has to define metrics on when to explore and when to exploit.
+This is a common problem of RL and is most often solved by really naive approaches like choosing actions at random.
+In the end we will also propose a new approach to this problem and compare our results to other solutions and finally make suggestions on how future work can further enhance the field of RL as it is today.
+
+
+\section{Outline}
+
+This thesis is structured as follows:
+\begin{itemize}
+
+\item Chapter \ref{section:Introduction} introduces the reader to the problem statement.
+\item Chapter \ref{section:background} provides the theoretical knowledge to understand later sections.
+\item Chapter \ref{section:related_work} gives an overview of recently released related work in this field of study.
+\item Chapter \ref{section:implementation} shows all the algorithms that were implemented in this work.
+\item Chapter \ref{section:results} presents all important results of this paper and compares them.
+\item Chapter \ref{section:conclusion} discusses the results of this paper and makes suggestions for future work.
+
+\end{itemize}

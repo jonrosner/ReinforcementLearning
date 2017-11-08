@@ -1,0 +1,41 @@
+\BOOKMARK [0][-]{section*.3}{Abstract}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Summary}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Outline}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Theoretical Background}{}% 6
+\BOOKMARK [1][-]{section.2.1}{The Reinforcement Learning Problem}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Markov Decision Process}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Temporal Difference Learning}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Q-Learning}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.5}{Artificial Neural Networks}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.5.1}{Components}{section.2.5}% 12
+\BOOKMARK [2][-]{subsection.2.5.2}{Backpropagation}{section.2.5}% 13
+\BOOKMARK [2][-]{subsection.2.5.3}{Deep Neural Networks}{section.2.5}% 14
+\BOOKMARK [1][-]{section.2.6}{Action-Value Function Approximation}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.7}{Policy Gradient}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.8}{Actor-Critic}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.9}{Tensorflow}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.10}{OpenAI Gym}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Related Work}{}% 20
+\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Deep-Q-Network}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Deep Deterministic Policy Gradient}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.3}{Proximal Policy Optimization}{chapter.4}% 24
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 25
+\BOOKMARK [1][-]{section.5.1}{CartPole-v0}{chapter.5}% 26
+\BOOKMARK [2][-]{subsection.5.1.1}{Goals}{section.5.1}% 27
+\BOOKMARK [2][-]{subsection.5.1.2}{Realization}{section.5.1}% 28
+\BOOKMARK [2][-]{subsection.5.1.3}{Results}{section.5.1}% 29
+\BOOKMARK [1][-]{section.5.2}{Pendulum-v0}{chapter.5}% 30
+\BOOKMARK [2][-]{subsection.5.2.1}{Goals}{section.5.2}% 31
+\BOOKMARK [2][-]{subsection.5.2.2}{Realization}{section.5.2}% 32
+\BOOKMARK [2][-]{subsection.5.2.3}{Results}{section.5.2}% 33
+\BOOKMARK [1][-]{section.5.3}{Swimmer-v1}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.3.1}{Goals}{section.5.3}% 35
+\BOOKMARK [2][-]{subsection.5.3.2}{Realization}{section.5.3}% 36
+\BOOKMARK [2][-]{subsection.5.3.3}{Results}{section.5.3}% 37
+\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 38
+\BOOKMARK [0][-]{chapter*.19}{Bibliography}{}% 39
+\BOOKMARK [0][-]{chapter*.20}{Glossary}{}% 40
+\BOOKMARK [0][-]{chapter*.21}{Notation}{}% 41

@@ -1,0 +1,27 @@
+\chapter{Related Work}
+\label{section:related_work}
+
+This chapter will shortly present the most important breakthroughs and influences for this thesis in recent years.
+
+
+RL approaches have gained a lot of attention in the last few years.
+Starting with DeepMind's 2013 paper \emph{Playing Atari with Deep Reinforcement Learning} \cite{atari} a new interest in this field arose not only in the public but also in science.
+Following DeepMind's original work, many extensions were presented, some of them with high and others with not so much impact.
+The most prominent additions to the DQN released were \emph{Deep Reinforcement Learning with Double Q-learning} \cite{ddqn}, \emph{Prioritized Experience Replay} \cite{per} and \emph{Dueling Network Architectures for Deep Reinforcement Learning} \cite{duel_dqn} which are all covered in this thesis.
+Exploration in these algorithms was mainly achieved by naively choosing random actions in some time steps.
+
+
+Following DQN deep methods for continuous action spaces evolved in the form of \emph{Deep Deterministic Policy Gradient} in the paper \emph{Continuous control with deep reinforcement learning} \cite{ddpg}.
+At first exploration was achieved here by adding noise to the predicted actions, either correlated in the form of an \emph{Ornstein–Uhlenbeck process} or uncorrelated in the form of \emph{uniform sampling}.
+Plappert et al presented a new method to apply noise not to the action space but directly to the parameters of the network \cite{param_noise}.
+The problem here is that this is only useful for off-policy algorithms such as DDPG because on-policy directly learn from the policy, meaning noise added to it disturbs learning.
+A method for on-policy algorithms was presented but it was shown that it did not affect the continuous controls environments we used in this thesis.
+
+
+After DDPG new stochastic algorithms were presented that achieved very good results in continuous control tasks such as the \emph{Swimmer-v1} environment.
+The most prominent examples are \emph{Trust Region Policy Optimization} \cite{trpo} and \emph{Proximal Policy Optimization Algorithms} \cite{ppo}.
+These algorithms have built in exploration because they act stochastically rather than deterministically.
+
+
+So far this thesis gave an introduction in RL as it is today, it gave a general overview of the theoretical background and it presented similar work of others in this direction.
+In the next chapter we will present the implementation of the algorithms used in this thesis.

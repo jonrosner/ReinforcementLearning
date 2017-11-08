@@ -1,0 +1,46 @@
+\addchap{Notation}
+\bgroup
+\def\arraystretch{1.5}%  1 is the default, change whatever you need
+\begin{longtable}{p{0.25\textwidth} p{0.705\textwidth}}
+  $t \in \mathbb{N}$ & Timestep \\
+  $S$ & Set of states\\
+  $s_t \in S$ & State in timestep $t$\\
+  $d_a \in \mathbb{N}$ & Action space dimension\\
+  $a_t \in \mathbb{R}^{d_a}$ & Continuous action in timestep $t$\\
+  $a_t \in \mathbb{N}^{d_a}$ & Discrete action in timestep $t$\\
+  $r_t \in \mathbb{R}$ & Reward in timestep $t$\\
+  $\mathbb{P}[S_t] \in \mathbb{R}$ & Probability of observing state $S_t$\\
+  $\mathbb{P}[S_{t+1} | S_t] \in \mathbb{R}$ & Probability of observing state $S_{t+1}$ in state $S_t$\\
+  $\gamma \in [0,1]$ & Discount factor\\
+  $G_t \in \mathbb{R}$ & Discounted sum of reward also called return\\
+  $v(s)$ & Value of state $s$\\
+  $\pi(a|s)$ & Probability of choosing action $a$ in state $s$ also called policy\\
+  $v_\pi(s)$ & State-value function following policy $\pi$\\
+  $q_\pi(s,a)$ & Action-value function following policy $\pi$\\
+  $\pi_*(a|s)$ & Optimal Policy for a given MDP\\
+  $v_*(s)$ & Value function of the optimal policy $\pi_*$\\
+  $q_*(s,a)$ & Action-value function of the optimal policy $\pi_*$\\
+  $\epsilon \in [0,1]$ & Amount of random actions\\
+  $N$ & Set of neurons in a neural network\\
+  $V$ & Set of connections between two neurons\\
+  $w_{(i,j)} \in \mathbb{R}$ & weight of the connection between neuron $n_i$ and $n_j$\\
+  $\alpha \in [0,1]$ & Learning Rate\\
+  $\Delta w_{(i,j)} \in \mathbb{R}$ & Change of weight $w_{(i,j)}$\\
+  $\theta \in \mathbb{R}^{N \times M}$ & Trainable parameters of a neural network\\
+  $\hat{q}(s,a, \theta)$ & Action-value function approximation with parameters $\theta$\\
+  $\pi_\theta(a|s)$ & Policy approximation with parameters $\theta$\\
+  $J(\theta)$ & Objective function approximation with parameters $\theta$\\
+  $\nabla_{\theta}J(\theta)$ & Gradient of $J(\theta)$ w.r.t. $\theta$\\
+  $\alpha, \beta \in [0,1]$ & Exponents of prioritized replay memory\\
+  $A(s,a)$ & Advantage function\\
+  $\tau \in [0,1]$ & Update rate for soft target update\\
+  $\mathcal{N}_t$ & Random process in timestep $t$\\
+  $\widetilde \theta$ & Network parameters with applied parameter noise\\
+  $\sigma$ & Standard deviation of a probability distribution\\
+  $r_t(\theta)$ & Probability ratio in timestep $t$ with parameters $\theta$\\
+  $L(\theta)$ & Surrogate objective function\\
+  $\hat{A}_t^{GAE(\gamma,\lambda)}$ & General Advantage estimate using parameters $\gamma,\lambda$\\
+
+
+\end{longtable}
+\egroup

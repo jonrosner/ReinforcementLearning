@@ -1,0 +1,27 @@
+\chapter{Conclusions and Future Work}
+\label{section:conclusion}
+
+In this thesis we looked at different algorithms to solve the \emph{Swimmer-v1} environment.
+We observed that DQN is not suited to solve tasks in continuous action space, at least not by simply discretizing the action space.
+We also found that the biggest problem of DDPG is that it settles in local maximums rather than finding a global one.
+PPO achieved the best results of all the algorithms tried in this thesis.
+From our results it looks like PPO or at least policy gradient based methods seem to be the best way at the moment to solve high dimensional tasks.
+
+
+Our newly introduced way to increase exploration in PPO actually made a significant improvement in our experiments.
+But there are still many things to improve in order to get a good and stable algorithm.
+The \emph{Swimmer-v1} environment is supposed to be completely solved when getting an average return of 360 over 100 consecutive trials.
+Unfortunately none of the algorithms in this thesis achieved this but our new approach got the closest with an average return of 300.
+
+Enhancements that could further increase performance:
+
+\begin{itemize}
+  \item The biggest problem we encountered during this thesis was the high variance of the PPO.
+  In some runs it achieved results of well over 200 while in others it oscillated between 150 and 200.
+  Future work could try to lower this variance in order to get a more stable algorithm.
+  \item PPO is a stochastic algorithm. But in an environment like this it might be better to use a deterministic approach.
+  Even though DDPG did not achieve high returns in this thesis it might be adopted in the future to make use of the good parts of PPO while still being deterministic.
+  \item Varying the standard deviation yielded good results even if the approach is still very basic.
+  One might be able to adopt the rate of exploration in a more clever way by maybe using something like a trust-region where exploration is slowed down if the network changes too fast and increased if it changes too slow.
+  \item Instead of changing the standard deviation it might be better to change the whole distribution, morphing it from a tight normal distribution towards a uniform distribution according to the wanted rate of exploration.
+\end{itemize}

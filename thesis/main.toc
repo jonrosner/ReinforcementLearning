@@ -1,0 +1,45 @@
+\select@language {english}
+\select@language {english}
+\select@language {german}
+\select@language {english}
+\contentsline {chapter}{Abstract}{vii}{section*.3}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Summary}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Outline}{2}{section.1.3}
+\contentsline {chapter}{\numberline {2}Theoretical Background}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}The Reinforcement Learning Problem}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Markov Decision Process}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Temporal Difference Learning}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Q-Learning}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Artificial Neural Networks}{10}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Components}{10}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Backpropagation}{12}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Deep Neural Networks}{13}{subsection.2.5.3}
+\contentsline {section}{\numberline {2.6}Action-Value Function Approximation}{13}{section.2.6}
+\contentsline {section}{\numberline {2.7}Policy Gradient}{14}{section.2.7}
+\contentsline {section}{\numberline {2.8}Actor-Critic}{15}{section.2.8}
+\contentsline {section}{\numberline {2.9}Tensorflow}{16}{section.2.9}
+\contentsline {section}{\numberline {2.10}OpenAI Gym}{18}{section.2.10}
+\contentsline {chapter}{\numberline {3}Related Work}{21}{chapter.3}
+\contentsline {chapter}{\numberline {4}Implementation}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Deep-Q-Network}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Deep Deterministic Policy Gradient}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Proximal Policy Optimization}{28}{section.4.3}
+\contentsline {chapter}{\numberline {5}Evaluation}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}CartPole-v0}{33}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Goals}{33}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Realization}{34}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Results}{34}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Pendulum-v0}{35}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Goals}{35}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Realization}{35}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Results}{36}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Swimmer-v1}{36}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Goals}{37}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Realization}{37}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Results}{38}{subsection.5.3.3}
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{41}{chapter.6}
+\contentsline {chapter}{\nonumberline Bibliography}{45}{chapter*.19}
+\contentsline {chapter}{\nonumberline Glossary}{49}{chapter*.20}
+\contentsline {chapter}{\nonumberline Notation}{51}{chapter*.21}

@@ -1,0 +1,81 @@
+ % The main file for CAMP reports
+ % Don't put any content in here.
+%% Draft document mode
+%% Final document
+\documentclass[11pt,a4paper,bibtotoc,idxtotoc,headsepline,footsepline,footexclude,BCOR14mm,DIV13]{scrbook}
+
+\input{components/info}
+
+% include settings
+\input{components/settings}
+
+% include commands
+\input{components/commands}
+
+\pdfinfo{
+   /Author (Jonathan R\"osner)
+   /Title (Reinforcement Learning for Adaptive Locomotion of a Snake-like Robot using Tensorflow)
+   /Keywords (RL, DQN, DDPG, PPO)
+}
+
+\hypersetup{%
+pdftitle={Reinforcement Learning for Adaptive Locomotion of a Snake-like Robot using Tensorflow},%
+pdfauthor={Jonathan R\"osner},%
+pdfkeywords={RL, DQN, DDPG, PPO},%
+}%
+
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
+
+\makeglossary
+
+\begin{document}
+
+	\frontmatter
+
+	\input{components/cover}
+
+	\clearemptydoublepage
+
+	\input{components/titlepage}
+
+
+	\input{components/disclaimer}
+
+	\input{components/abstract}
+
+	\tableofcontents
+
+	\mainmatter
+
+		\input{chapters/Introduction}
+
+		\input{chapters/background}
+
+    \input{chapters/related_work}
+
+		\input{chapters/Implementation}
+
+		\input{chapters/results}
+
+		\input{chapters/conclusion}
+
+    \appendix{}
+
+    \listoffigures
+    % \listoftables
+    % \listofalgorithms
+
+    \clearemptydoublepage
+
+	  \bibliography{bibliography/literature}
+
+    \clearemptydoublepage
+
+    \input{components/glossary}
+    \input{components/notation}
+
+
+\end{document}

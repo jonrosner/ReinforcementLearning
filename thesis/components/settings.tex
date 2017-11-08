@@ -1,0 +1,387 @@
+% Included by MAIN.TEX
+% Defines the settings for the CAMP report document
+
+\renewcommand{\sectfont}{\normalfont \bfseries}        % Schriftart der Kopfzeile
+
+% manipulate footer
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+\ifoot[\footertext]{\footertext} % \footertext set in INFO.TEX
+%\setkomafont{pagehead}{\normalfont\rmfamily}
+\setkomafont{pagenumber}{\normalfont\rmfamily}
+
+%% allow sophisticated control structures
+\usepackage{ifthen}
+\usepackage{longtable}
+
+% use Palatino as default font
+\usepackage{palatino}
+
+% enable special PostScript fonts
+\usepackage{pifont}
+
+% make thumbnails
+\usepackage{thumbpdf}
+
+%to use the subfigures
+%\usepackage{subfigure}
+
+\usepackage{subcaption}
+
+\usepackage{colortbl}
+
+\usepackage{mathtools}
+
+
+%% show program code\ldots
+%\usepackage{verbatim}
+%\usepackage{program}
+
+%% enable TUM symbols on title page
+\usepackage{styles/tumlogo}
+
+
+\usepackage{multirow}
+
+%% use colors
+\usepackage{color}
+
+%% make fancy math
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{yhmath} % f�r die adots
+%% mark text as preliminary
+%\usepackage[draft,german,scrtime]{prelim2e}
+
+%% create an index
+\usepackage{makeidx}
+
+% for the program environment
+\usepackage{float}
+
+%% load german babel package for german abstract
+%\usepackage[german,american]{babel}
+\usepackage[german,english]{babel}
+\selectlanguage{english}
+
+% use german characters as well
+\usepackage[utf8]{inputenc}       % allow Latin1 characters
+
+% use initals dropped caps - doesn't work with PDF
+\usepackage{dropping}
+
+\usepackage{styles/shortoverview}
+%----------------------------------------------------
+%      Graphics and Hyperlinks
+%----------------------------------------------------
+
+%% check for pdfTeX
+\ifx\pdftexversion\undefined
+ %% use PostScript graphics
+ \usepackage[dvips]{graphicx}
+ \DeclareGraphicsExtensions{.eps,.epsi}
+ \graphicspath{{figures/}{figures/review}}
+ %% allow rotations
+ \usepackage{rotating}
+ %% mark pages as draft copies
+ %\usepackage[english,all,light]{draftcopy}
+ %% use hypertex version of hyperref
+ \usepackage[hypertex,hyperindex=false,colorlinks=false]{hyperref}
+\else %% reduce output size \pdfcompresslevel=9
+ %% declare pdfinfo
+ %\pdfinfo {
+ %  /Title (my title)
+ %  /Creator (pdfLaTeX)
+ %  /Author (my name)
+ %  /Subject (my subject	)
+ %  /Keywords (my keywords)
+ %}
+ %% use pdf or jpg graphics
+ \usepackage[pdftex]{graphicx}
+ \DeclareGraphicsExtensions{.jpg,.JPG,.png,.pdf,.eps}
+ \graphicspath{{figures/}}
+
+ %% Load float package, for enabling floating extensions
+ \usepackage{float}
+
+ %% allow rotations
+ \usepackage{rotating}
+ %% use pdftex version of hyperref
+ \usepackage[pdftex,colorlinks=true,linkcolor=red,citecolor=red,%
+ anchorcolor=red,urlcolor=red,bookmarks=true,%
+ bookmarksopen=true,bookmarksopenlevel=0,plainpages=false%
+ bookmarksnumbered=true,hyperindex=false,pdfstartview=%
+ ]{hyperref}
+%
+%\usepackage[pdftex,colorlinks=false,linkcolor=red,citecolor=red,%
+% anchorcolor=red,urlcolor=red,bookmarks=true,%
+% bookmarksopen=true,bookmarksopenlevel=0,plainpages=false%
+% bookmarksnumbered=true,hyperindex=false,pdfstartview=%
+% ]{hyperref}
+\fi
+
+
+
+
+%% Fancy chapters
+%\usepackage[Lenny]{fncychap}
+%\usepackage[Glenn]{fncychap}
+%\usepackage[Bjarne]{fncychap}
+
+%\usepackage[avantgarde]{quotchap}
+
+% set the bibliography style
+%\bibliographystyle{styles/bauermaNum}
+%\bibliographystyle{alpha}
+\bibliographystyle{plain}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+
+\usepackage{parskip}
+%\setlength{\parskip}{3mm plus 4mm minus 4mm}
+%\setlength{\parskip}{2mm plus0mm minus1mm}
+%\setlength{\parindent}{0pt}
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+
+
+\usepackage{titlesec}
+\titlespacing*{\section} {0pt}{2.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+
+
+\usepackage{listings}
+
+\usepackage{pythonhighlight}
+
+\usepackage{color}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\usepackage{listings}
+\usepackage{setspace}
+\definecolor{Code}{rgb}{0,0,0}
+\definecolor{Decorators}{rgb}{0.5,0.5,0.5}
+\definecolor{Numbers}{rgb}{0.5,0,0}
+\definecolor{MatchingBrackets}{rgb}{0.25,0.5,0.5}
+\definecolor{Keywords}{rgb}{0,0,1}
+\definecolor{self}{rgb}{0,0,0}
+\definecolor{Strings}{rgb}{0,0.63,0}
+\definecolor{argStrings}{rgb}{1,0.5,0}
+\definecolor{Comments}{rgb}{0,0.63,1}
+\definecolor{Backquotes}{rgb}{0,0,0}
+\definecolor{Classname}{rgb}{0,0,0}
+\definecolor{FunctionName}{rgb}{0,0,0}
+\definecolor{Operators}{rgb}{0,0,0}
+\definecolor{Background}{rgb}{0.98,0.98,0.98}
+%TODO: when time remains: color numbers
+%https://tex.stackexchange.com/questions/34896/coloring-digits-with-the-listings-package
+\lstdefinelanguage{Python}{
+numbers=left,
+numberstyle=\footnotesize,
+numbersep=1em,
+xleftmargin=1em,
+aboveskip=1em,
+belowskip=1em,
+framextopmargin=2em,
+framexbottommargin=2em,
+showspaces=false,
+showtabs=false,
+showstringspaces=false,
+frame=L,
+tabsize=4,
+% Basic
+basicstyle=\ttfamily\small\setstretch{1},
+backgroundcolor=\color{Background},
+% Comments
+commentstyle=\color{Comments}\slshape,
+morecomment=[l][\color{Strings}]{\#},
+% Strings
+stringstyle=\color{Strings},
+morecomment=[s][\color{Strings}]{"""}{"""},
+morecomment=[s][\color{Strings}]{'''}{'''},
+morecomment=[s][\color{argStrings}]{'}{'},
+% keywords
+morekeywords={import,from,class,def,for,while,if,is,in,elif,else,not,and,or,print,break,continue,return,True,False,None,access,as,del,except,exec,finally,global,import,lambda,pass,print,raise,try,assert},
+keywordstyle={\color{Keywords}\bfseries},
+% additional keywords
+morekeywords={[2]@invariant,pylab,numpy,np,scipy,tensorflow},
+keywordstyle={[2]\color{Decorators}\slshape},
+emph={self},
+emphstyle={\color{self}\slshape},
+%
+}
+
+\usepackage{xcolor}
+\usepackage{caption}
+\captionsetup{format=plain}
+
+%use this for quoting
+\usepackage{csquotes}
+
+% Algorithms settings
+\usepackage{algorithm}
+\usepackage{algcompatible}
+\usepackage[noend]{algpseudocode}
+\newcommand\Let[2]{\State #1 $\gets$ #2}
+\newcommand\Textline[1]{#1}
+\makeatletter
+\algnewcommand{\LineComment}[1]{\Statex \hskip\ALG@thistlm \(\triangleright\) #1}
+\algnewcommand{\LineCommentFunc}[1]{\Statex \hspace{\leftmargin}\hspace{-1pt}\(\triangleright\) #1}
+\makeatother
+\newcommand\Blet[2]{\State \textbf{let} #1 \textbf{be} #2}
+\errorcontextlines\maxdimen
+% begin vertical rule patch for algorithmicx
+% borrowing from http://tex.stackexchange.com/questions/41956/marking-conditional-versions-with-line-in-margin
+% see http://tex.stackexchange.com/questions/110431/ploblems-with-vertical-lines-in-algorithmicx
+\RequirePackage{zref-abspage}
+\RequirePackage{zref-user}
+\RequirePackage{tikz}
+%\RequirePackage{atbegshi}
+\usetikzlibrary{calc}
+\RequirePackage{tikzpagenodes}
+\RequirePackage{etoolbox}
+\makeatletter
+\newcommand*\ALG@lastblockb{b}
+\newcommand*\ALG@lastblocke{e}
+\apptocmd{\ALG@beginblock}{%
+    %\typeout{beginning block, nesting level \theALG@nested, line \arabic{ALG@line}}%
+    \ifx\ALG@lastblock\ALG@lastblockb
+        \ifnum\theALG@nested>1\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\ALG@tikzborder}{}%
+    \fi
+    \let\ALG@lastblock\ALG@lastblockb%
+}{}{\errmessage{failed to patch}}
+
+\pretocmd{\ALG@endblock}{%
+    %\typeout{ending block, nesting level \theALG@nested, line \arabic{ALG@line}}%
+    \ifx\ALG@lastblock\ALG@lastblocke
+        \addtocounter{ALG@nested}{1}%
+        \addtolength\ALG@tlm{\csname ALG@ind@\theALG@nested\endcsname}%
+        \ifnum\theALG@nested>1\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{\endALG@tikzborder}{}%
+        \addtolength\ALG@tlm{-\csname ALG@ind@\theALG@nested\endcsname}%
+        \addtocounter{ALG@nested}{-1}%
+    \fi
+    \let\ALG@lastblock\ALG@lastblocke%
+}{}{\errmessage{failed to patch}}
+\tikzset{ALG@tikzborder/.style={line width=0.5pt,black}}
+\newcommand*\currenttextarea{current page text area}
+\newcommand*{\updatecurrenttextarea}{%
+    \if@twocolumn
+        \if@firstcolumn
+            \renewcommand*{\currenttextarea}{current page column 1 area}%
+        \else
+            \renewcommand*{\currenttextarea}{current page column 2 area}%
+        \fi
+    \else
+        \renewcommand*\currenttextarea{current page text area}%
+    \fi
+}
+\newcounter{ALG@tikzborder}
+\newcounter{ALG@totaltikzborder}
+\newenvironment{ALG@tikzborder}[1][]{%
+    % Allow user to overwrite the used style locally
+    \ifx&#1&\else
+        \tikzset{ALG@tikzborder/.style={#1}}%
+    \fi
+    \stepcounter{ALG@totaltikzborder}%
+    \expandafter\edef\csname ALG@ind@border@\theALG@nested\endcsname{\theALG@totaltikzborder}%
+    \setcounter{ALG@tikzborder}{\csname ALG@ind@border@\theALG@nested\endcsname}%
+    %\typeout{begin ALG border nesting level=\theALG@nested, tikzborder=\theALG@tikzborder, tlm=\the\ALG@tlm}%
+    \tikz[overlay,remember picture] \coordinate (ALG@tikzborder-\theALG@tikzborder);% node {\theALG@tikzborder};% Modified \tikzmark macro
+    \zlabel{ALG@tikzborder-begin-\theALG@tikzborder}%
+    % Test if end-label is at the same page and draw first half of border if not, from start place to the end of the page
+    \ifnum\zref@extract{ALG@tikzborder-begin-\theALG@tikzborder}{abspage}=\zref@extract{ALG@tikzborder-end-\theALG@tikzborder}{abspage} \else
+        \updatecurrenttextarea
+        \ALG@drawvline{[shift={(0pt,.5\ht\strutbox)}]ALG@tikzborder-\theALG@tikzborder}{\currenttextarea.south east}{\ALG@thistlm}%
+        % If it spreads over more than two pages:
+        \newcounter{ALG@tikzborderpages\theALG@tikzborder}%
+        \setcounter{ALG@tikzborderpages\theALG@tikzborder}{\numexpr-\zref@extract{ALG@tikzborder-begin-\theALG@tikzborder}{abspage}+\zref@extract{ALG@tikzborder-end-\theALG@tikzborder}{abspage}}%
+        \ifnum\value{ALG@tikzborderpages\theALG@tikzborder}>1
+            \edef\nextcmd{\noexpand\AtBeginShipoutNext{\noexpand\ALG@tikzborderpage{\theALG@tikzborder}{\the\ALG@thistlm}}}%some pages need a border on the whole page
+            \nextcmd
+        \fi
+    \fi
+}{%
+    \setcounter{ALG@tikzborder}{\csname ALG@ind@border@\theALG@nested\endcsname}%
+    %\typeout{end ALG border nesting level=\theALG@nested, tikzborder=\theALG@tikzborder, tlm=\the\ALG@tlm}%
+    \tikz[overlay,remember picture] \coordinate (ALG@tikzborder-end-\theALG@tikzborder);% node {\theALG@tikzborder};% Modified \tikzmark macro
+    \zlabel{ALG@tikzborder-end-\theALG@tikzborder}%
+    % Test if begin-label is at the same page and draw whole border if so, from start place to end place
+    \updatecurrenttextarea
+    \ifnum\zref@extract{ALG@tikzborder-begin-\theALG@tikzborder}{abspage}=\zref@extract{ALG@tikzborder-end-\theALG@tikzborder}{abspage}\relax
+        \ALG@drawvline{[shift={(0pt,.5\ht\strutbox)}]ALG@tikzborder-\theALG@tikzborder}{ALG@tikzborder-end-\theALG@tikzborder}{\ALG@thistlm}%
+    % Otherwise draw second half of border, from the top of the page to the end place
+    \else
+        %\settextarea
+        \ALG@drawvline{\currenttextarea.north west}{ALG@tikzborder-end-\theALG@tikzborder}{\ALG@thistlm}%
+    \fi
+}
+\newcommand*{\ALG@drawvline}[3]{%#1=from, #2=to, #3=value of \ALG@tlm/\ALG@thisthm
+    \begin{tikzpicture}[overlay,remember picture]
+        \draw [ALG@tikzborder]
+            let \p0 = (\currenttextarea.north west), \p1=(#1), \p2 = (#2)
+             in
+            (#3+\fboxsep+.5\pgflinewidth+\x0,\y1+\fboxsep+.5\pgflinewidth)%-\fboxsep-.5\pgflinewidth
+             --
+            (#3+\fboxsep+.5\pgflinewidth+\x0,\y2-\fboxsep-.5\pgflinewidth)
+            %node[midway,anchor=east] {\ALG@tikzbordertext}
+        ;
+    \end{tikzpicture}%
+}
+\newcommand{\ALG@tikzborderpage}[2]{%the whole page gets a border, #1=value of \theALG@tikzborder, #2=value of \ALG@tlm/\ALG@thistlm
+    \updatecurrenttextarea
+    \setcounter{ALG@tikzborder}{#1}%
+    \ALG@drawvline{\currenttextarea.north west}{\currenttextarea.south east}{#2}%
+    \addtocounter{ALG@tikzborderpages\theALG@tikzborder}{-1}%
+    \ifnum\value{ALG@tikzborderpages\theALG@tikzborder}>1
+        \AtBeginShipoutNext{\ALG@tikzborderpage{#1}{#2}}%
+    \fi
+    \vspace{-0.5\baselineskip}% Compensate for the generated extra space at begin of the page. No idea why exactly this happens.
+}
+\def\ALG@tikzbordertext{\the\ALG@tlm}
+% end vertical rule patch for algorithmicx
+
+% continuation indent patch, slightly extended from http://tex.stackexchange.com/questions/78776/forced-indentation-in-algorithmicx to support multiple paragraphs in one block
+\makeatletter
+\newlength{\ALG@continueindent}
+\setlength{\ALG@continueindent}{2em}
+\newcommand*{\ALG@customparshape}{\parshape 2 \leftmargin \linewidth \dimexpr\ALG@tlm+\ALG@continueindent\relax \dimexpr\linewidth+\leftmargin-\ALG@tlm-\ALG@continueindent\relax}
+\newcommand*{\ALG@customparshapex}{\parshape 1 \dimexpr\ALG@tlm+\ALG@continueindent\relax \dimexpr\linewidth+\leftmargin-\ALG@tlm-\ALG@continueindent\relax}
+\apptocmd{\ALG@beginblock}{\ALG@customparshape\everypar{\ALG@customparshapex}}{}{\errmessage{failed to patch}}
+\makeatother
+% end continuation indent patch
+
+
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem{lem}[equation]{Lemma}
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{cor}[equation]{Corollary}
+\theoremstyle{definition}
+\newtheorem{defn}[equation]{Definition}
+\newtheorem{exmpl}[equation]{Example}
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,chains}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{calc}
+\usepackage{caption}
+\tikzstyle{block} = [rectangle, draw, thick, text width=6em, text centered, rounded corners, minimum width = 3em, minimum height = 3em]
+\tikzstyle{block_big} = [rectangle, draw, thick, text width=8em, text centered, rounded corners, minimum width = 8em, minimum height = 8em]
+\tikzstyle{line} = [draw, -latex', thick, align=center]
+\tikzstyle{round} = [circle, draw, thick, text width=2em, text centered, minimum width = 2em, minimum height = 2em]
+\tikzstyle{round_big} = [circle, draw, thick, text centered, minimum width = 5em, minimum height = 5em]
+\tikzstyle{square} = [rectangle, draw, thick, text width=3em, text centered, minimum width = 3em, minimum height = 3em]

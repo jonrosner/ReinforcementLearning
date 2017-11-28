@@ -2,6 +2,7 @@ Reinforcement Learning for Adaptive Locomotion of a Snake-like Robot using Tenso
 =====================================================
 This repository contains my bachelor's thesis latex-project and the code I wrote for it.
 The pdf-version of the thesis can be found under ``thesis/main.pdf``.
+The presentation contains animations that cannot be rendered when viewed as pdf
 
 Algorithms
 ====
